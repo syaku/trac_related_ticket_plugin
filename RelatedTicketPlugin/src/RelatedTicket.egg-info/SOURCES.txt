@@ -1,0 +1,8 @@
+setup.py
+RelatedTicket.egg-info/PKG-INFO
+RelatedTicket.egg-info/SOURCES.txt
+RelatedTicket.egg-info/dependency_links.txt
+RelatedTicket.egg-info/entry_points.txt
+RelatedTicket.egg-info/top_level.txt
+related_ticket/__init__.py
+related_ticket/related_ticket.py
