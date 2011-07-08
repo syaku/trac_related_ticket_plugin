@@ -1,10 +1,10 @@
 Metadata-Version: 1.0
 Name: RelatedTicket
 Version: 0.1
-Summary: �֘A�`�P�b�g�v���O�C��
+Summary: 関連チケットプラグイン
 Home-page: UNKNOWN
 Author: @syaku
 Author-email: syaku@sevenspirals.net
 License: UNKNOWN
-Description: Trac�Ɋ֘A�`�P�b�g�̋@�\��ǉ�����v���O�C���B
+Description: Tracに関連チケットの機能を追加するプラグイン
 Platform: UNKNOWN
