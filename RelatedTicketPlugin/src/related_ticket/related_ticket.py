@@ -15,7 +15,7 @@ class RelatedTicketPlugin(Component):
     def ticket_created(self, ticket):
         pass
     
-    def ticket_changed(self, ticket):
+    def ticket_changed(self, ticket, comment, author, old_values):
         pass
     
     def ticket_deleted(self, ticket):
