@@ -59,10 +59,10 @@ class RelatedTicketPlugin(Component):
         ''' Ticketオブジェクトの関連チケットのIDリストを取得する処理 '''
         list = []
         if ticket.has_key(self.static_key_name):
-            tmp_list = ticket[self.static_key_name].split(',')
+            tmp_list = ticket[self.static_key_name].split(u',')
             for value in tmp_list:
                 try:
-                    list.append(int(value.lstrip(' #')))
+                    list.append(int(value.lstrip(u' #')))
                 except ValueError:
                     ''' さしあたってTicketID以外は無視. '''
                     pass
@@ -78,9 +78,9 @@ class RelatedTicketPlugin(Component):
         else:
             related_list.append(ticket.id)
             related_list.sort()
-            related_ticket[self.static_key_name] = ''
+            related_ticket[self.static_key_name] = u''
             for id in related_list:
-                if related_ticket[self.static_key_name] != '':
+                if related_ticket[self.static_key_name] != u'':
                     related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + u','
                 related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + unicode("#"+str(id), encoding='utf-8')
             now = datetime.now(trac.util.datefmt.utc)
@@ -95,9 +95,9 @@ class RelatedTicketPlugin(Component):
         else:
             return
                 
-        related_ticket[self.static_key_name] = ''
+        related_ticket[self.static_key_name] = u''
         for id in related_list:
-            if related_ticket[self.static_key_name] != '':
+            if related_ticket[self.static_key_name] != u'':
                 related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + u','
             related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + unicode("#"+str(id), encoding='utf-8')
         now = datetime.now(trac.util.datefmt.utc)
