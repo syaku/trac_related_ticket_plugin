@@ -81,10 +81,10 @@ class RelatedTicketPlugin(Component):
             related_ticket[self.static_key_name] = ''
             for id in related_list:
                 if related_ticket[self.static_key_name] != '':
-                    related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + ','
+                    related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + u','
                 related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + unicode("#"+str(id), encoding='utf-8')
             now = datetime.now(trac.util.datefmt.utc)
-            related_ticket.save_changes('auto-script', "関連チケットに登録されました.", now)
+            related_ticket.save_changes(u'auto-script', u"関連チケットに登録されました.", now)
             
     def delete_related_ticket(self, ticket, related_ticket):
         ''' 関連チケットのカスタムフィールドを更新.(削除) '''
@@ -98,8 +98,8 @@ class RelatedTicketPlugin(Component):
         related_ticket[self.static_key_name] = ''
         for id in related_list:
             if related_ticket[self.static_key_name] != '':
-                related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + ','
+                related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + u','
             related_ticket[self.static_key_name] = related_ticket[self.static_key_name] + unicode("#"+str(id), encoding='utf-8')
         now = datetime.now(trac.util.datefmt.utc)
-        related_ticket.save_changes('auto-script', "関連チケットから解除されました.", now)
+        related_ticket.save_changes(u'auto-script', u"関連チケットから解除されました.", now)
         
